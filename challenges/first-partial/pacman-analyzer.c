@@ -25,7 +25,6 @@ bool siEsta(packages_t * head, char nombre[20]){
     packages_t * current = head;
     while (current != NULL) {
         if(strcmp(current->name,nombre)==0){
-            
             return true;
         }
     current = current->next;
@@ -90,7 +89,6 @@ void buscarNombre(packages_t *head, char nombre[20]){
 
 void actualizarUpgraded(packages_t *head, char nombre[20],char last_upgraded[30]){
     packages_t * current = head;
-
     while (current != NULL) {
         if(strcmp(current->name,nombre)==0){
             current->howManyUpdates=current->howManyUpdates+1;
@@ -170,14 +168,13 @@ int main(int argc, char **argv) {
         if(strcmp(archivo[1],"txt")==0){
             firstIsCorrect=true;
         }else{
-            printf("\nInserte un .txt porfavor1\n\n");
+            printf("\nPlease verify that your using a  .txt\n\n");
 
         }
         if(strcmp(archivo2[1],"txt")==0){
             secondIsCorrect=true;
         }else{
-            printf("\nInserte un .txt porfavor2\n\n");
-
+            printf("\nPlease verify that your using a  .txt\n\n");
         }
         if(firstIsCorrect && secondIsCorrect){
             analizeLog(nombreArchivoArg2, nombreArchivoArg4);
@@ -187,13 +184,13 @@ int main(int argc, char **argv) {
         
         
     }else{
-        printf("\nNo se puede leer porque no puso bien la entrada \n\n");
-        //return 1;
+        printf("\nPlease verify the input command \n\n");
+        return 0;
     }
 
     
 
-    //return 0;
+    return 0;
 }
 
 
@@ -409,8 +406,8 @@ void analizeLog(char *logFile, char *report) {
             fprintf(fptr,"%s, ", recorrido->name);            
         }
         recorrido=recorrido->next;
-    }
-
+    } 
+    //231
     fprintf(fptr,"[ALPMSCRIPLET] count  : %i\n",ALPMSCRIPTTLET);
     fprintf(fptr,"[ALPM]                : %i\n",ALPM);
     fprintf(fptr,"[PACMAN] count        : %i\n",PACMAN);
