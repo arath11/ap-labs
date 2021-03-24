@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-char *datos[300];
+char *datos[300]; 
 
 int *datosInt[300];
 char *datosString[300];
