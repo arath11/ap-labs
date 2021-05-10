@@ -34,7 +34,7 @@ func main() {
 
 	//entrada
 	//go run client.go -user user1 -server localhost:9000
-	//s1
+	//s11
 	if args[3] == "-server" && args[1] == "-user" {
 		servidor = args[4]
 		usuario = args[2]

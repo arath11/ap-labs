@@ -220,7 +220,7 @@ func handleConn(conn net.Conn) {
 				Users[who].channel <- "irc-server > Local time: " + local.Location().String() + " " + local.Format("15:04")
 				//todo poner esta fecha en el usuario
 				//Users[who].channel <- "irc-server > Local time: " + local.Location().String() + " " + local.Format("2006-01-02 15:04:05")
-				//1
+				//11
 			case "/users":
 				//listo
 				if len(entrada) == 1 {
