@@ -44,8 +44,8 @@ The `scripts/` The main entities needed for the game are:
 
 In the images below you can see the umls
 
-![uml](DiagramaDeClases.PNG)
-![uml](DiagramaSecuencia.PNG)
+![uml](DiagramaDeClases.png)
+![uml](DiagramaSecuencia.png)
 
 ### Concurrency
 
